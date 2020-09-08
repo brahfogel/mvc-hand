@@ -1,0 +1,7 @@
+
+
+<ifModule mod_rewrite.c>
+ RewriteEngine on
+ RewriteRule ^$ webroot/ [L] #все преренаправлять в webroot/
+ RewriteRule (.*) webroot/$1 [L] #в том числе и с параметрами
+</ifModule>

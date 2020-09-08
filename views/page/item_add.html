@@ -1,0 +1,79 @@
+
+<!------------------------------- content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 col-sm-10 col-xs-12 content">
+            <div class="row figurat">
+                <div class="col-md-12 col-sm-12 col-xs-12 editor">
+                    <p>Новый товар</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 product_main">
+                    <div class="block">
+                        <div class="contour_main">
+                            <div class="row">
+
+
+                                <div class="col-md-6">
+                                    <div class="image_main">
+                                        <img src="/img/picture.png" alt="...">
+                                    </div>
+                                    <form class="formimg">
+                                        <div class="form-group">
+                                            <input type="file" name="uploadfile">
+                                            <button data-id="img_add-<?=Config::get('dir')?>" onclick="return false">Загрузить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="cap">
+                                        <p><span class="item">Заголовок*</span><span class="head contentedit" contenteditable="true" id="name"></span></p>
+                                        <!-- display:none -->
+                                        <p style="display:none">Img:<span contenteditable="true" id="img"></span></p>
+                                        <!-- display:none end -->
+                                        <p><span class="item">Категория*</span></p>
+                                        <ul>
+                                            <li>
+                                                <input class="check_cat" name="check_cat" type="radio" value="needlework"><span>Рукоделие</span>
+                                            </li>
+                                            <li>
+                                                <input class="check_cat" name="check_cat" type="radio" value="paintings"><span>Картины</span>
+                                            </li>
+                                            <li>
+                                                <input class="check_cat" name="check_cat" type="radio" value="others" checked><span>Другие</span>
+                                            </li>
+                                        </ul>
+                                        <p><span class="item">Описание*</span></p>
+                                        <p class="about contentedit" contenteditable="true" id="about"></p>
+                                        <p><span class="item">Цена*</span><span class="price contentedit" contenteditable="true" id="price"></span> грн</p>
+                                        <a href="#">
+                                            <div class="buy">
+                                                <div class="btn btn-default" data-id="add-<?=Config::get('dir')?>">Добавить</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!------------------------------- rubric -->
+        <div class="col-md-1 col-sm-2 col-xs-11 rubric">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0">
+                    <h3>РУБРИКИ</h3>
+                    <ul>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Картины</span></span></li></a>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Разное</span></span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- rubric end -->
+    </div>
+</div>
+<!-- content end -->

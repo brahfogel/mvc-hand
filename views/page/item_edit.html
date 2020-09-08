@@ -1,0 +1,97 @@
+
+<!------------------------------- content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 col-sm-10 col-xs-12 content">
+            <div class="row figurat">
+                <div class="col-md-12 col-sm-12 col-xs-12 editor">
+                    <p>Редактор</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 product_main">
+                    <div class="block">
+                        <div class="contour_main">
+                            <div class="row">
+
+
+                                <div class="col-md-6">
+                                    <div class="image_main">
+                                        <img src="/img/<?=$data['GoodsId']['img']?>" alt="<?=$data['GoodsId']['type']?>">
+                                    </div>
+                                    <form class="formimg">
+                                        <div class="form-group">
+                                            <input type="file" name="uploadfile">
+                                            <button data-id="img_edit-<?=Config::get('dir')?>" onclick="return false">Загрузить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="cap">
+                                        <p><span class="item">Заголовок*</span><span class="head contentedit" id="name" contenteditable="true"><?=$data['GoodsId']['name']?></span></p>
+                                        <!-- display:none -->
+                                        <p style="display:none">Img:<span contenteditable="true" id="img"><?=$data['GoodsId']['img']?></span></p>
+                                        <!-- display:none end -->
+                                        <p><span class="item">Категория*</span></p>
+
+                                        <?php
+                                        if ($data['GoodsId']['type'] === "needlework") {
+                                        ?>
+                                        <ul>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="needlework" checked><span>Рукоделие</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="paintings"><span>Картины</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="others"><span>Все товары</span></li>
+                                        </ul>
+                                        <?php
+                                        }
+                                        elseif($data['GoodsId']['type'] === "paintings") {
+                                        ?>
+                                        <ul>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="needlework"><span>Рукоделие</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="paintings" checked><span>Картины</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="others"><span>Все товары</span></li>
+                                        </ul>
+                                        <?php
+                                        }
+                                        elseif($data['GoodsId']['type'] === "others") {
+                                        ?>
+                                        <ul>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="needlework"><span>Рукоделие</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="paintings"><span>Картины</span></li>
+                                        <li><input class="check_cat" name="check_cat" type="radio" value="others" checked><span>Все товары</span></li>
+                                        </ul>
+                                        <?php
+                                        }
+                                        ?>
+
+                                        <p><span class="item">Описание*</span></p>
+                                        <p class="about contentedit" id="about" contenteditable="true"><?=$data['GoodsId']['about']?></p>
+                                        <p><span class="item">Цена*</span><span class="price contentedit" id="price" contenteditable="true" data-price="<?=$data['GoodsId']['id']?>"><?=$data['GoodsId']['price']?></span> грн</p>
+                                        <a href="#">
+                                            <div class="buy">
+                                                <div class="btn btn-default update" data-id="edit-<?=$data['GoodsId']['id']?>-<?=Config::get('dir')?>">Сохранить</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------- rubric -->
+        <div class="col-md-1 col-sm-2 col-xs-11 rubric">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0">
+                    <h3>РУБРИКИ</h3>
+                    <ul>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Картины</span></span></li></a>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Разное</span></span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- rubric end -->
+    </div>
+</div>
+<!-- content end -->

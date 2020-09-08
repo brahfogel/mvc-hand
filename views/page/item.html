@@ -1,0 +1,48 @@
+
+<!------------------------------- content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 col-sm-10 col-xs-12 content">
+            <div class="row figurat">
+                <div class="col-md-12 col-sm-12 col-xs-12 product_main">
+                    <div class="block">
+                        <div class="contour_main">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="image_main" data-img="<?=$data['GoodsId']['id']?>">
+                                        <img src="/img/<?=$data['GoodsId']['img']?>" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="cap">
+                                        <h4 class="head"><a data-name="<?=$data['GoodsId']['id']?>"><?=$data['GoodsId']['name']?></a></h4>
+                                        <p class="about"><?=$data['GoodsId']['about']?></p>
+                                        <p><span class="price" data-price="<?=$data['GoodsId']['id']?>"><?=$data['GoodsId']['price']?></span> грн</p>
+                                        <a href="#">
+                                            <div class="buy">
+                                                <div class="btn btn-default" data-id="cart-<?=$data['GoodsId']['id']?>-<?=Config::get('dir')?>">В корзину</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------- rubric -->
+        <div class="col-md-1 col-sm-2 col-xs-11 rubric">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0">
+                    <h3>РУБРИКИ</h3>
+                    <ul>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Картины</span></span></li></a>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Разное</span></span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- rubric end -->
+    </div>
+</div>
+<!-- content end -->

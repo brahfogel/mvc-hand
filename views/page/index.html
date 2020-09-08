@@ -1,0 +1,76 @@
+
+<!------------------------------- content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 col-sm-10 col-xs-12 content">
+            <div class="row figurat">
+                <?php
+                if ($data['listGoods']) {
+                    foreach ($data['listGoods'] as $goodsVal) {
+                ?>
+                    <div class="col-md-2 col-sm-3 col-xs-12 product">
+                        <div class="block">
+                            <div class="contour">
+                                <a href="/<?=Config::get('dir')?>page/item/<?=$goodsVal['id']?>">
+                                    <div class="image" data-img="<?=$goodsVal['id']?>">
+                                        <img src="/img/<?=$goodsVal['img']?>" alt="...">
+                                    </div>
+                                </a>
+                                <div class="cap">
+                                    <h4 class="head"><a href="/<?=Config::get('dir')?>page/item/<?=$goodsVal['id']?>" data-name="<?=$goodsVal['id']?>"><?=$goodsVal['name']?></a></h4>
+                                    <p><span class="price" data-price="<?=$goodsVal['id']?>"><?=$goodsVal['price']?></span> грн</p>
+                                    <div class="buy">
+                                        <div class="btn btn-default add_cart" data-id="cart-<?=$goodsVal['id']?>-<?=Config::get('dir')?>">
+                                            <img id="cart_small" src="/img/online-shopping-cart.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 page">
+                <div class="col-md-12 col-sm-12 hidden-xs" style="background:white; height:30px"></div>
+                <ul>
+                    <?php
+                    if ($data['numberPages']['amount'] - 1) {
+                        for($i=0;$i<$data['numberPages']['amount'];$i++){
+                            if($i!=$data['numberPages']['active']){
+                        ?>
+                                <a href="/<?=Config::get('dir')?>page/index/<?=$data['numberPages']['category']?>/<?=$i?>"><li><span id="font_rotate"><?=$i+1?></span></li></a>
+                        <?php
+                            }
+                            else {
+                        ?>
+                                <a href="/<?=Config::get('dir')?>page/index/<?=$data['numberPages']['category']?>/<?=$i?>"><li id="page_active"><span id="font_rotate"><?=$i+1?></span></li></a>
+                        <?php
+                            }
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+
+
+        <!------------------------------- rubric -->
+        <div class="col-md-1 col-sm-2 col-xs-11 rubric">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0">
+                    <h3>РУБРИКИ</h3>
+                    <ul>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Картины</span></span></li></a>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Разное</span></span></li></a>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- rubric end -->
+    </div>
+</div>
+<!-- content end -->

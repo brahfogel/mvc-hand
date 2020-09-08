@@ -1,0 +1,105 @@
+
+<!------------------------------- header -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0">
+            <div class="ground"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row header">
+        <div class="col-md-4 col-sm-4 col-xs-4 enter">
+            <p><a href="/<?=Config::get('dir')?>page/access">Вход</a><a href="/<?=Config::get('dir')?>page/access_reg">Регистрация</a></p>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 hello">
+            <p></p>
+        </div>
+        <div class="col-md-12 hidden-xs" style="height:30px"></div>
+        <div class="col-md-7 col-sm-9 col-xs-12" style="padding-right:5px">
+            <a href="/<?=Config::get('dir')?>" title="На главную">
+                <h3 style="font-family: 'Marck Script', cursive">Чудеса делаются своими руками</h3>
+            </a>
+        </div>
+        <div class="col-md-5 col-sm-3 hidden-xs social">
+            <a href="" class="facebook"><img src="/img/facebook.png"></a>
+            <a href="" class="facebook"><img src="/img/vk.png"></a>
+            <a href="" class="facebook"><img src="/img/youtube.png"></a>
+        </div>
+        <div class="col-md-12 hidden-xs" style="height:15px"></div>
+        <div class="col-md-7 col-sm-5 col-xs-9" style="padding-right:0">
+            <a href="/<?=Config::get('dir')?>" title="На главную">
+                <h2><?=Config::get('site_name')?></h2>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-5 hidden-xs">
+            <div class="search" style="margin:11px 0">
+                <input type="text" class="form-control" placeholder="Поиск">
+                <a href="#"><span class="glyphicon"><img src="/img/search.png"></span></a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 col-xs-3" style="padding-left:0">
+            <div id="store">
+                <a href="/<?=Config::get('dir')?>page/item_cart">
+                    <img id="cart2" src="/img/online-shopping-cart-green.png">
+                    <img id="cart1" src="/img/online-shopping-cart.png">
+                    <span><?=$data['countCartProducts']?></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-12 hidden-xs" style="height:20px"></div>
+    </div>
+</div>
+
+
+<!------------------------------- navbar -->
+<div class="container">
+    <div class="row">
+        <nav class="navbar" role="navigation">
+            <div class="col-md-1 col-sm-1 col-xs-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" href="#">Категории</span>
+                </div>
+            </div>
+            <div class="col-md-11 col-sm-11 col-xs-12">
+                <div class="navbar-collapse collapse">
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs" style="padding-left:5px; padding-top:10px">
+                            <div class="search">
+                                <input type="text" class="form-control" placeholder="Поиск">
+                                <a href="#"><span class="glyphicon"><img src="/img/search.png"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-10 category">
+                            <ul class="nav navbar-nav" style="margin-bottom:0">
+                                <li><a href="/<?=Config::get('dir')?>page/index/needlework"><img src="/img/knitting-neddles.png">Рукоделие<span><?=$data['quantityGoods'][0]['COUNT(*)']?></span></a></li>
+                                <li><a href="/<?=Config::get('dir')?>page/index/paintings"><img src="/img/painter-palette.png">Картины<span><?=$data['quantityGoods'][2]['COUNT(*)']?></span></a></li>
+                                <li><a href="/<?=Config::get('dir')?>page/index/others"><img src="/img/all-direction-tool.png">Другие<span><?=$data['quantityGoods'][1]['COUNT(*)']?></span></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" style="margin-bottom:10px"></ul>
+                        </div>
+                        <!--<div class="col-xs-2 visible-xs" style="height:40px"></div>-->
+                        <div class="col-xs-1 col-xs-offset-1 visible-xs social" style="padding:0px">
+                            <a href="" class="facebook" target="_blank"><img src="/img/facebook.png"></a>
+                            <a href="" class="facebook" target="_blank"><img src="/img/vk.png"></a>
+                            <a href="" class="facebook" target="_blank"><img src="/img/youtube.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="background:white; height:69px; margin-top:-30px"></div>
+        <div class="col-md-12 hidden-xs" style="height:25px; background:white"></div>
+    </div>
+</div><!-- navbar end -->
+<!-- header end -->

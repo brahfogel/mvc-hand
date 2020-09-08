@@ -1,0 +1,64 @@
+
+<!------------------------------- content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-11 col-sm-10 col-xs-12 content">
+            <div class="row figurat tov_cart" id="tov_cart">
+                <?php
+                if ($data['productsCart']) {
+                ?>
+                    <div class="col-md-12 col-sm-12 col-xs-12 editor">
+                        <p>Корзина
+                            <a href="/<?=Config::get('dir')?>page/item_cart/clear" id="cart_del">
+                                <img id="trash" src="/img/trash.png">
+                                <img id="trash_active" src="/img/trash_active.png">
+                            </a>
+                        </p>
+                    </div>
+                <?php
+                    foreach ($data['productsCart'] as $goodsVal) {
+                ?>
+                    <div class="col-md-2 col-sm-3 col-xs-12 product">
+                        <div class="block">
+                            <div class="contour">
+                                <a href="/<?=Config::get('dir')?>page/item/<?=$goodsVal['id']?>">
+                                    <div class="image"><img src="/img/<?=$goodsVal['img']?>" alt="..."></div>
+                                </a>
+                                <div class="cap">
+                                    <h4 class="head">
+                                        <a href="/<?=Config::get('dir')?>page/item/<?=$goodsVal['id']?>"><?=$goodsVal['name']?></a>
+                                    </h4>
+                                    <p><span class="price"><?=$goodsVal['price']?></span> грн</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    }
+                }
+                else {
+                ?>
+                    <p>Корзина пуста!</p>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+
+
+        <!------------------------------- rubric -->
+
+        <div class="col-md-1 col-sm-2 col-xs-11 rubric">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0">
+                    <h3>РУБРИКИ</h3>
+                    <ul>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Картины</span></span></li></a>
+                        <a href="#"><li><span class="rubric_item"><span class="rubric_count">0</span><span>Разное</span></span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- rubric end -->
+    </div>
+</div>
+<!-- content end -->
